@@ -43,7 +43,7 @@ define(function (require) {
 					return arr;
 				}
 			},
-			/*================ 内部方法 =============*/
+			/*================ 方法 =============*/
 			preprocess : function (template) {
 				if(template==null || typeof(template) ==="undefined") return null;
 
