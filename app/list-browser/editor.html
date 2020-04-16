@@ -1,0 +1,27 @@
+<div id="data-editor" class="easyui-layout" data-options="fit:true">
+      <div data-options="region:'center',title:'基本信息'" style="padding:10px; ">                
+          <form id="data-frmEditor" method="post" action="">
+          <input name="id" type="hidden" value="0" />
+          <span style=" padding:10px; display:inline-block; width:98%;min-width:200px;">
+           	<span>登录名称： </span><input name="login_name" class="easyui-textbox"  style="width: 240px;" />
+          </span>
+          <span style=" padding:10px; display:inline-block; width:98%;min-width:200px;">
+          		<span>用户昵称： </span><input name="nick_name" class="easyui-textbox"  style="width: 240px;" />           	
+          </span> 
+          <span style=" padding:10px; display:inline-block; width:98%;min-width:200px;">
+          		<span>用户名称： </span><input name="user_name" class="easyui-textbox"  style="width: 240px;" /><span class="suiframe-must">*</span>
+          </span>           
+          <span style=" padding:10px; display:inline-block; width:98%;min-width:200px;">
+          		<span>绑定角色： </span><input id='Sys-User-role_id' name="role_id" class="easyui-combobox"  style="width: 160px;" />
+          		<span class="suiframe-action" action-name="Role/create"><a id="Sys-User-role_id-btn" class="easyui-linkbutton" href="javascript:void(0)" onclick="SUIFrame.component('sysUserEditor','addRole')" style="width:80px">增加角色</a></span>
+          		<span class="suiframe-must">*</span>
+          </span>                 
+          <span style="padding:10px; display:inline-block; width:98%;min-width:200px;">
+          	<span style="vertical-align:top;">用户描述：</span> <textarea id="Sys-User-description" name="description" style="height:60px;width:240px"></textarea></span><br/>                
+          </form>
+      </div>
+      <div data-options="region:'south',border:false" style="text-align:center;padding:5px 0 0; height:40px;">
+          <a id="Sys-User-frmEditor-submit"  class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" onclick="SUIFrame.component('sysUserEditor','submit')" style="width:80px">确定</a>
+          <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="SUIFrame.component('sysUserEditor','cancel')" style="width:80px">取消</a>
+      </div>        
+  </div>

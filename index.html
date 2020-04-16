@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="" charset="UTF-8" />
+    <title></title>
+    <script src="./sea.js" type="text/javascript"  id="seajsnode"></script> 
+    <script src="./seajs-css.js" type="text/javascript" ></script>
+    <script src="./seajs-text.js" type="text/javascript" ></script>
+</head>
+<body style="overflow-y: hidden; margin:0;" >
+    <noscript>
+        <div>
+            <img src="./assets/images/noscript.gif" alt="" />
+        </div>
+    </noscript>
+    <script>
+    (function(){
+    	seajs.config({
+ 			// 别名配置
+ 			  alias: {
+                'xapp':'js/xapp/easyui/app/app.js',
+ 			    'json': 'js/json2.js',
+ 			    'jquery': 'js/jquery.js',
+ 			    'easyui': 'js/jquery-easyui-1.5.5/jquery.easyui.min.js',
+ 			    'easyui-locale': 'js/jquery-easyui-1.5.5/locale/easyui-lang-zh-CN.js',
+ 			   	'easyui-css':"js/jquery-easyui-1.5.5/themes/default/easyui.css",
+ 	    		'easyui-icon-css':"js/jquery-easyui-1.5.5/themes/icon.css",
+ 	    		'kindeditor-css':"js/Kindeditor-4.1.11/themes/default/default.css",
+ 	    		'font-awesome':"assets/css/font-awesome.min.css",
+ 			  },
+ 			  // 调试模式
+ 			  debug: false,
+ 			  // 文件编码
+ 			  charset: 'utf-8'	
+		});    			
+    	seajs.use('jquery',function(){
+			seajs.use('easyui',function(){
+				seajs.use(['easyui-locale','/app/app.js'],function(_,app){					
+					app.config({debug:true,tagIdPrefix:'xapp-'});
+					app.run();
+				});
+			});
+		});
+	}());   
+    </script>
+</body>
+</html>

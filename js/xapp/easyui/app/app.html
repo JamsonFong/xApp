@@ -1,0 +1,44 @@
+<div  id="app-framework"   >
+	<!-- 头部  -->
+    <div data-options="region:'north'" style="height: 65px; background:#E0ECFF;" >
+		<div  style="width:100%; text-align:center; font-weight:bold;">
+            <span style="text-align:center;float:left;">
+            	<img id="app-logo" class="logo" alt="Logo" style="max-height:55px;" />
+            </span>            
+            <span style="position:absolute;bottom:2px;right:0px;height:30px;text-align:left;">
+            	<!--导航图标按钮 -->
+            	<span id="app-shortcut-bar"></span>
+            	<span style="position: relative; display:inline-block;width:120px;height:28px; " > 
+            		<span style="position: absolute;left:0px;bottom:2px;">        	
+		            	<span id="app-account-menubutton" >
+		            	    <span  class="fa fa-user-circle-o fa-lg fa-c-lb"></span>
+		                    <span class="fa-c-lb ">{{ "APP_MANAGING_CENTER" | translate }}</span>           		
+		            	</span>
+	            	</span>
+            	</span>
+            </span>
+		</div>    
+    </div>  
+    <!-- 标签栏  -->
+    <div data-options="region:'center'" style="overflow:hidden;">
+    			<div id="app-tabs" ></div>
+		    	<div id="app-pages-mask" class="datagrid-mask" style="display:none;"></div>
+    			<div id="app-pages-mask-msg" class="datagrid-mask-msg" style="display: none; left: 50%; height: 16px; margin-left: -96.5px; line-height: 16px;">{{ "APP_PAGE_LOADING" | translate}}</div> 
+    </div>    
+    <!-- 底部  -->
+    <div data-options="region:'south'" id="footerPanel"  style="height: 32px;background:#E0ECFF; ">
+    	<div style="text-align: center; font-weight: bold">
+    		<span style="padding-top:5px; float:left;text-align:left; "> {{"APP_YOUR_ROLE" | translate}}:<span  id="roleNameTagId"></span>&nbsp;</span>
+    		<span>{{ "APP_NAME" | translate }}</span>&nbsp;<span>v1.0</span>&nbsp;&nbsp;&nbsp;[<span id="app-logout"> {{ "APP_LOGOUT" |translate }}</span>]
+    		<span style="padding-top:5px; float:right;text-align:right; ">{{ "APP_TECH_SUPPORT" | translate }}:<a target="_blank" href="http://www.jamson.cn" style="text-decoration:none;color:#d28d0d;">{{"APP_TECH_NAME"|translate}}</a>&nbsp;</span>
+		</div>
+    </div>
+</div>
+
+<div id="app-account-menu">
+	<div>Help</div>
+    <div>Update</div>
+    <div>About</div>
+</div>
+
+

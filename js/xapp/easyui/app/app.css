@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/** easyui css 修改部分  **/
+.panel-title,.accordion .accordion-header-selected .panel-title,
+.panel-body,.tabs li.tabs-selected a.tabs-inner,.menu,.menu-active,
+.l-btn,.l-btn-plain:hover,*{    
+    color: #3d76a5;
+}
+/** easyui css 修改部分  **/
+
+.notice-item{
+	position: relative; display:inline-block;width:40px;height:28px; 
+}
+.notice-button{
+	 position: absolute;left:0px;bottom:0px;
+}
+.notice-count{
+	line-height:10px;font-size:12px;background-color:#f0533e;color:#fff;padding: 4px 4px; position: absolute;right:0px;top:-8px; border-radius: 10px;
+}
+.notice-count-zero{
+	display:none;
+}
+
+.xapp-menu-item{
+	cursor:pointer;
+	font-size:14px;
+	line-height:32px;
+}
+.xapp-menu-icon{
+	padding:0 10px;
+}
+.xapp-menu-item .active{
+	background-color:#ffe48d;
+}
+.xapp-menu-item .on{
+	background-color:#f9efcf;
+}
+.xapp-menu-indent{
+	padding-left:20px;
+}
+.xapp-menu-hidden{
+	display:none;
+}
+.xapp-menu-arrow{
+	font-size:10px;
+}
+.xapp-menu-arrow.off{
+	display:none;
+}
+.fa-c-green{
+	color:#178a17;
+}
