@@ -1,0 +1,44 @@
+[
+    {
+        "text":"系统管理",
+        "iconCls":"fa-gear",
+        "children":[
+            {
+                "text":"角色管理",
+                "iconCls":"fa-users",
+                "children":[
+                    {
+                        "text":"权限管理",
+                        "iconCls":"fa-user",
+                        "children":[
+                            {
+                                "text":"添加角色",
+                                "iconCls":"fa-user"                                
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text":"账号管理",
+                "iconCls":"fa-user"
+            }
+        ]
+    },{
+        "text":"网站管理",
+        "iconCls":"fa-internet-explorer",
+        "children":[
+            {
+                "text":"资讯管理",
+                "iconCls":"fa-newspaper-o"
+            },{
+                "text":"模板管理",
+                "iconCls":"fa-file-text-o"
+            },{
+                "text":"评论管理",
+                "iconCls":"fa-comment-o"
+            }
+
+        ]
+    }
+]

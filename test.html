@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content charset="UTF-8" />
+    <title></title>
+    <script src="./sea.js" type="text/javascript"  id="seajsnode"></script>  
+    <script src="./seajs-css.js" type="text/javascript" ></script> 
+    <script src="./seajs-text.js" type="text/javascript" ></script> 
+</head>
+<body  style="overflow-y: hidden; " scroll="no">   
+    <script>
+    (function(){
+    	/*
+    	console.log(/^(\/[-_a-zA-Z0-9]*)+$/i.test('/vafaf32/asdfasdf3/99'));
+    	*/
+    	/*
+    	console.log(/^(\/\w)+/i.exec('#/sdfsf'));
+    	console.log(/^(\/\w)+/i.exec('/versiton002340'));
+    	console.log(/^(\/\w)+/i.exec('/vers/indx_slelisl0/'));
+    	console.log(/^(\/\w)+/i.exec('/vers/indx_slelisl0/sdfsd'));
+    	*/
+
+    	/*
+    	console.log('#/sdf-sf/asfasdff'.match(/[-_a-zA-Z]+/i));
+    	console.log('/ver/2340'.match(/[1-9]{1}[0-9]* /i));
+    	console.log('/vers/indx_slelisl0/'.match(/^(\/\w)+/i));
+    	console.log('/vers/indx_slelisl0/sdfsd'.match(/^(\/\w)+/i));
+    	*/
+    	/*
+    	seajs.use(['app/engine/action' ],function(A){
+    		var c={
+    			flag:false,
+    			getName:function(){return "Test";},
+    			onTest1:function(e){console.log('onTest1');},
+        		onTest2:function(e){console.log('onTest2'); //e.close();
+        		},
+        		onTest3:function(e){console.log('onTest3');},
+        		onTest4:function(e){console.log('onTest4');this.flag=true;},
+        		onTest5:function(e){console.log('onTest5');},
+        		onTest6:function(e){console.log('onTest6');
+        			e.next([function(a){
+        				console.log('onTest6.1');	
+        			},function(a){
+        				//a.bi();
+        				console.log('onTest6.2');	
+        			},function(a){
+        				console.log('onTest6.3');	
+        			}],[true,true,true])
+        			.fail(function(r){
+        				console.log(r);
+        			});
+        		},
+        		onTest7:function(e){console.log('onTest7');
+        			/*
+        			e.pause();
+	    			setTimeout(function(){
+	    				e.resume();
+	    			},1000);*//*
+	    			e.cancel();
+    			},
+        		onTest8:function(e){console.log('onTest8');},
+        		onTest9:function(){console.log('onTest9');}
+    		};*/
+    		/*
+    		var subAction=A.createAction.call(c,'test2','onTest4').next('onTest5').next('onTest6');
+    		var action=A.createAction.call(c,'test','onTest1')
+    		.next('onTest2')
+    		.next('onTest3')
+    		.next([
+    			[subAction,function(){return !this.flag;}],
+    			["onTest7",true]
+    		])
+    		.next('onTest8')
+    		.next('onTest9')
+			.run();*/
+    		/*
+    		var subAction2=A.createAction.call(c,'test2','onTest4').next('onTest5').next('onTest6');
+    		var action2=A.createAction.call(c,'test','onTest1')
+    		.next('onTest2')
+    		.next('onTest3')
+    		.next(
+   				[subAction2,"onTest7"],
+   				[function(){return !this.flag;},true]
+    		)
+    		.next('onTest8')
+    		.next('onTest9')
+    		.then(function(e){
+    			console.log('onTest10');
+    		})
+    		.next(function(e){
+    			console.log('onTest11');
+    		})
+    		.fail(function(err){
+    			console.error(err);
+    		})
+    		.final(function(){
+    			console.log('final...');
+    		})
+    		.run();
+    		
+		});*/
+		/*
+	function Class(){  }
+    Class.extends = function (options) {
+		var subClass = function(){ }
+		var proto = new this();
+		var superClass = this.prototype;
+		for (var n in options) {
+			var item = options[n];
+			if (item instanceof Function) item.super = superClass;
+			else if (n === "className" ) proto.className = options[n];
+			proto[n] = item;
+		}
+		subClass.prototype = proto;
+		subClass.extends = this.extends;
+		return subClass;    
+    };
+    Class.prototype.say = function() {
+		this.name = "Class";
+		console.log("I am Class.");
+	}    
+		
+	var Component = Class.extends({
+		className:"Component",
+		say:function(){
+			arguments.callee.super.say.call(this);
+			this.name2 = "Component";
+			console.log("I am Component.");
+		}
+	})
+	var App = Component.extends({
+		className:"App",
+		say:function(){
+			arguments.callee.super.say.call(this);
+			this.name3 = "App";
+			console.log("I am App.");
+		}
+	});
+	
+	
+
+	var app = new App();
+	console.log(app);
+	console.log(app instanceof Class);
+	console.log(app instanceof Component);
+	console.log(app instanceof App);
+	app.say();
+ */
+ var tpl = "<div>{{ a  }} </div>" 
+ tpl.replace(/\{\{([\w\|\s,'"]+)\}\}/g,
+				function (match, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) {					
+					var exp = $1.split('|');
+					var params = exp[0].split(',');
+						for(var p in params){
+							console.log(params[p].trim());
+						}
+					if(exp.length>1){
+
+					}					
+					console.log('$1:'+$1);
+					console.log('$2:'+$2);
+					console.log('$3:'+$3);
+					// console.log('$4:'+$4);
+					// console.log('$5:'+$5);					
+					// console.log('$6:'+$6);
+					// console.log('$7:'+$7);
+					// console.log('$8:'+$8);
+					// console.log('$9:'+$9);
+					// console.log('$10:'+$10);
+					// console.log('$11:'+$11);					
+					// console.log('$12:'+$12);
+				});
+
+
+	}());   
+    </script>
+</body>
+</html>
