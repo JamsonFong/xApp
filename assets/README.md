@@ -1,0 +1,1 @@
+The is the assets for the whole project.
